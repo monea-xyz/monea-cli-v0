@@ -1,0 +1,20 @@
+[package]
+name = "monea-cli"
+version = "0.1.0-alpha.1"
+authors = ["Jacob D. Castro <jacob@monealabs.xyz>"]
+edition = "2021"
+description = "An unopinionated CLI for playing rollup legos."
+documentation = "https://docs.monealabs.xyz/monea-cli"
+repository = "https://github.com/monea-labs/monea-cli"
+readme = "README.md"
+license = "MIT"
+keywords = ["cli", "crypto", "web3", "layer2", "rollups", "docker"]
+publish = ["some-registry-name"]
+
+[dependencies]
+clap = { version = "4.5.6", features = ["derive"] }
+dialoguer = "0.11.0"
+dirs = "5.0.1"
+prettytable = "0.10.0"
+serde = { version = "1.0.203", features = ["derive"] }
+serde_yaml = "0.9.34"
