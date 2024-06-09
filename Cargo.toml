@@ -4,11 +4,18 @@ version = "0.1.0-alpha.1"
 authors = ["Jacob D. Castro <jacob@monealabs.xyz>"]
 edition = "2021"
 description = "An unopinionated CLI for playing rollup legos."
-documentation = "https://docs.monealabs.xyz/monea-cli"
+homepage = "https://monealabs.xyz"
+documentation = "https://docs.monealabs.xyz/cli"
 repository = "https://github.com/monea-labs/monea-cli"
 readme = "README.md"
 license = "MIT"
 keywords = ["cli", "crypto", "web3", "layer2", "rollups", "docker"]
+
+[package.metadata.wix]
+upgrade-guid = "2524547C-8618-4B4B-AAD8-BD50BAF9284C"
+path-guid = "4D2F4995-9408-4FD9-89E2-56711B67D848"
+license = false
+eula = false
 
 [dependencies]
 clap = { version = "4.5.6", features = ["derive"] }
@@ -20,3 +27,36 @@ semver = "1.0.23"
 serde = { version = "1.0.203", features = ["derive"] }
 serde_json = "1.0.117"
 serde_yaml = "0.9.34"
+
+# The profile that 'cargo dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
+
+# Config for 'cargo dist'
+[workspace.metadata.dist]
+# The preferred cargo-dist version to use in CI (Cargo.toml SemVer syntax)
+cargo-dist-version = "0.15.1"
+# CI backends to support
+ci = "github"
+# The installers to generate for each app
+installers = ["shell", "powershell", "npm", "homebrew", "msi"]
+# A GitHub repo to push Homebrew formulas to
+tap = "monea-labs/monea-cli"
+# Target platforms to build apps for (Rust target-triple syntax)
+targets = [
+  "aarch64-apple-darwin",
+  "x86_64-apple-darwin",
+  "x86_64-unknown-linux-gnu",
+  "x86_64-pc-windows-msvc",
+]
+# The archive format to use for windows builds (defaults .zip)
+windows-archive = ".tar.gz"
+# The archive format to use for non-windows builds (defaults .tar.xz)
+unix-archive = ".tar.gz"
+# Publish jobs to run in CI
+publish-jobs = ["homebrew"]
+# Publish jobs to run in CI
+pr-run-mode = "plan"
+# Whether to install an updater program
+install-updater = true
