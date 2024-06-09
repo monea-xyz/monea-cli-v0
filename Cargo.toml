@@ -9,7 +9,7 @@ documentation = "https://docs.monealabs.xyz/cli"
 repository = "https://github.com/monea-labs/monea-cli"
 readme = "README.md"
 license = "MIT"
-keywords = ["cli", "crypto", "web3", "layer2", "rollups", "docker"]
+keywords = ["cli", "crypto", "rollups", "docker"]
 
 [package.metadata.wix]
 upgrade-guid = "2524547C-8618-4B4B-AAD8-BD50BAF9284C"
