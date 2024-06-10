@@ -1,6 +1,6 @@
 [package]
 name = "monea-cli"
-version = "0.1.0-alpha.6"
+version = "0.1.0-alpha.7"
 authors = ["Jacob D. Castro <jacob@monealabs.xyz>"]
 edition = "2021"
 description = "An unopinionated CLI for playing rollup legos."
