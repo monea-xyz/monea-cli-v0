@@ -57,3 +57,6 @@ pr-run-mode = "plan"
 publish-prereleases = true
 # Whether to install an updater program
 install-updater = true
+
+[package.metadata.dist.bin-aliases]
+"monea-cli" = ["monea"]
