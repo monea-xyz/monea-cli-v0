@@ -83,6 +83,7 @@ impl Default for SettlementOptions {
 #[derive(Debug, ValueEnum, Clone, Serialize, Deserialize)]
 pub enum SequencerOptions {
     Default,
+    Based,
     Espresso,
 }
 
