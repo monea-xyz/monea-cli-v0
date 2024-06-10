@@ -53,5 +53,7 @@ unix-archive = ".tar.gz"
 publish-jobs = ["homebrew"]
 # Publish jobs to run in CI
 pr-run-mode = "plan"
+# Whether to publish prereleases to package managers
+publish-prereleases = true
 # Whether to install an updater program
 install-updater = true
