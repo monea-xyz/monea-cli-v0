@@ -59,4 +59,4 @@ publish-prereleases = true
 install-updater = true
 
 [package.metadata.dist.bin-aliases]
-"monea-cli" = "monea"
+"monea-cli" = ["monea"]
