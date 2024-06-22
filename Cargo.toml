@@ -6,7 +6,7 @@ edition = "2021"
 description = "An unopinionated CLI for playing rollup legos."
 homepage = "https://monealabs.xyz"
 documentation = "https://docs.monealabs.xyz/cli"
-repository = "https://github.com/monea-labs/monea-cli"
+repository = "https://github.com/monea-xyz/monea-cli"
 readme = "README.md"
 license = "MIT"
 keywords = ["cli", "crypto", "rollups", "docker"]
@@ -42,9 +42,14 @@ ci = "github"
 # The installers to generate for each app
 installers = ["shell", "powershell", "npm", "homebrew", "msi"]
 # A GitHub repo to push Homebrew formulas to
-tap = "monea-labs/homebrew-tap"
+tap = "monea-xyz/homebrew-tap"
 # Target platforms to build apps for (Rust target-triple syntax)
-targets = ["aarch64-apple-darwin", "x86_64-apple-darwin", "x86_64-unknown-linux-gnu", "x86_64-pc-windows-msvc"]
+targets = [
+  "aarch64-apple-darwin",
+  "x86_64-apple-darwin",
+  "x86_64-unknown-linux-gnu",
+  "x86_64-pc-windows-msvc",
+]
 # The archive format to use for windows builds (defaults .zip)
 windows-archive = ".tar.gz"
 # The archive format to use for non-windows builds (defaults .tar.xz)

@@ -31,6 +31,6 @@ pub fn version_check() {
         println!("cargo install monea-cli");
 
         println!("\nFrom GitHub Releases:");
-        println!("Download the latest binary from https://github.com/monea-labs/monea-cli/releases and replace your current executable.");
+        println!("Download the latest binary from https://github.com/monea-xyz/monea-cli/releases and replace your current executable.");
     }
 }
